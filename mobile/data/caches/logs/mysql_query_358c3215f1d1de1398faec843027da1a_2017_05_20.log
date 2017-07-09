@@ -1,0 +1,417 @@
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('f9afcc5300cb422f3fe299987759f9f2', '1495273014', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1495273015', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:0:{}' WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1495271215
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1495271217
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT `ec_salt` FROM `ecfw0009`.`ecs_admin_user`WHERE user_name = 'admin'
+
+SELECT user_id, user_name, password, last_login, action_list, last_login,suppliers_id,ec_salt FROM `ecfw0009`.`ecs_admin_user` WHERE user_name = 'admin' AND password = 'b5782b07e92e95fff5794f58e01379d9'
+
+UPDATE `ecfw0009`.`ecs_admin_user` SET last_login='1495244225', last_ip='0.0.0.0' WHERE user_id='14'
+
+SELECT DISTINCT session_id FROM `ecfw0009`.`ecs_cart` AS c, `ecfw0009`.`ecs_sessions` AS s WHERE c.session_id = s.sesskey 
+
+DELETE FROM `ecfw0009`.`ecs_cart` WHERE session_id NOT  IN ('') 
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1495273025', ip = '0.0.0.0', userid = '0', adminid = '14', user_name='0', user_rank='0', discount='0', email='0', data = 'a:4:{s:10:\"admin_name\";s:5:\"admin\";s:11:\"action_list\";s:3:\"all\";s:10:\"last_check\";s:10:\"1481512298\";s:12:\"suppliers_id\";s:1:\"0\";}' WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2' LIMIT 1
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+DELETE FROM `ecfw0009`.`ecs_sessions` WHERE expiry < 1495271226
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT suppliers_id, suppliers_name, suppliers_desc
+            FROM `ecfw0009`.`ecs_suppliers`
+            WHERE  is_check = 1 
+
+SELECT c.cat_id, c.cat_name, c.measure_unit, c.parent_id, c.is_show, c.show_in_nav, c.grade, c.sort_order, COUNT(s.cat_id) AS has_children FROM `ecfw0009`.`ecs_category` AS c LEFT JOIN `ecfw0009`.`ecs_category` AS s ON s.parent_id=c.cat_id GROUP BY c.cat_id ORDER BY c.parent_id, c.sort_order ASC
+
+SELECT cat_id, COUNT(*) AS goods_num  FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND is_on_sale = 1  GROUP BY cat_id
+
+SELECT gc.cat_id, COUNT(*) AS goods_num  FROM `ecfw0009`.`ecs_goods_cat` AS gc , `ecfw0009`.`ecs_goods` AS g  WHERE g.goods_id = gc.goods_id AND g.is_delete = 0 AND g.is_on_sale = 1  GROUP BY gc.cat_id
+
+SELECT brand_id, brand_name FROM `ecfw0009`.`ecs_brand` ORDER BY sort_order
+
+SELECT suppliers_id, suppliers_name, suppliers_desc
+            FROM `ecfw0009`.`ecs_suppliers`
+            WHERE  is_check = 1 
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` AS g WHERE is_delete='0'  AND is_real='1'
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT suppliers_id, suppliers_name, suppliers_desc
+            FROM `ecfw0009`.`ecs_suppliers`
+            WHERE  is_check = 1 
+
+SELECT c.cat_id, c.cat_name, c.measure_unit, c.parent_id, c.is_show, c.show_in_nav, c.grade, c.sort_order, COUNT(s.cat_id) AS has_children FROM `ecfw0009`.`ecs_category` AS c LEFT JOIN `ecfw0009`.`ecs_category` AS s ON s.parent_id=c.cat_id GROUP BY c.cat_id ORDER BY c.parent_id, c.sort_order ASC
+
+SELECT cat_id, COUNT(*) AS goods_num  FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND is_on_sale = 1  GROUP BY cat_id
+
+SELECT gc.cat_id, COUNT(*) AS goods_num  FROM `ecfw0009`.`ecs_goods_cat` AS gc , `ecfw0009`.`ecs_goods` AS g  WHERE g.goods_id = gc.goods_id AND g.is_delete = 0 AND g.is_on_sale = 1  GROUP BY gc.cat_id
+
+SELECT brand_id, brand_name FROM `ecfw0009`.`ecs_brand` ORDER BY sort_order
+
+SELECT suppliers_id, suppliers_name, suppliers_desc
+            FROM `ecfw0009`.`ecs_suppliers`
+            WHERE  is_check = 1 
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` AS g WHERE is_delete='0'  AND is_real='1'
+
+SELECT goods_id, goods_name, goods_type, goods_sn, virtual_sales, shop_price, is_on_sale, is_best, is_new, is_hot, sort_order, goods_number, integral,  (promote_price > 0 AND promote_start_date <= '1495267199' AND promote_end_date >= '1495267199') AS is_promote  FROM `ecfw0009`.`ecs_goods` AS g WHERE is_delete='0'  AND is_real='1' ORDER BY goods_id DESC  LIMIT 0,15
+
+SELECT DISTINCT cat_id
+            FROM `ecfw0009`.`ecs_attribute`
+            WHERE attr_type = 1
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1495273040', ip = '0.0.0.0', userid = '0', adminid = '14', user_name='0', user_rank='0', discount='0', email='0', data = 'a:4:{s:10:\"admin_name\";s:5:\"admin\";s:11:\"action_list\";s:3:\"all\";s:10:\"last_check\";s:10:\"1481512298\";s:12:\"suppliers_id\";s:1:\"0\";}' WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions` WHERE expiry < 1495271240
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE add_time >= '1481512298'
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE pay_time >= 1481512298
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1495273041', ip = '0.0.0.0', userid = '0', adminid = '14', user_name='0', user_rank='0', discount='0', email='0', data = 'a:4:{s:10:\"admin_name\";s:5:\"admin\";s:11:\"action_list\";s:3:\"all\";s:10:\"last_check\";i:1495244241;s:12:\"suppliers_id\";s:1:\"0\";}' WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2' LIMIT 1
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1495273104', ip = '0.0.0.0', userid = '0', adminid = '14', user_name='0', user_rank='0', discount='0', email='0', data = 'a:4:{s:10:\"admin_name\";s:5:\"admin\";s:11:\"action_list\";s:3:\"all\";s:10:\"last_check\";i:1495244241;s:12:\"suppliers_id\";s:1:\"0\";}' WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions` WHERE expiry < 1495271304
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT goods_sn, goods_name, goods_type, shop_price FROM `ecfw0009`.`ecs_goods` WHERE goods_id = '108'
+
+SELECT g.goods_attr_id, g.attr_value, g.attr_id, a.attr_name
+            FROM `ecfw0009`.`ecs_goods_attr` AS g
+                LEFT JOIN `ecfw0009`.`ecs_attribute` AS a
+                    ON a.attr_id = g.attr_id
+            WHERE goods_id = '108'
+            AND a.attr_type = 1
+            ORDER BY g.goods_attr_id ASC
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_products` AS p WHERE goods_id = 108 
+
+SELECT product_id, goods_id, goods_attr, product_sn, product_number
+                FROM `ecfw0009`.`ecs_products` AS g
+                WHERE goods_id = 108 
+                ORDER BY product_id DESC
+
+SELECT goods_attr_id, attr_value FROM `ecfw0009`.`ecs_goods_attr` WHERE goods_id = '108' order by goods_attr_id DESC
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1495273147', ip = '0.0.0.0', userid = '0', adminid = '14', user_name='0', user_rank='0', discount='0', email='0', data = 'a:4:{s:10:\"admin_name\";s:5:\"admin\";s:11:\"action_list\";s:3:\"all\";s:10:\"last_check\";i:1495244241;s:12:\"suppliers_id\";s:1:\"0\";}' WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2' LIMIT 1
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_goods` SET is_delete = 1 WHERE goods_id = '108'
+
+SELECT `goods_name` FROM `ecfw0009`.`ecs_goods` WHERE goods_id = '108'
+
+INSERT INTO `ecfw0009`.`ecs_admin_log` (log_time, user_id, log_info, ip_address)  VALUES ('1495244360', 14, '回收商品: 3', '0.0.0.0')
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1495273160', ip = '0.0.0.0', userid = '0', adminid = '14', user_name='0', user_rank='0', discount='0', email='0', data = 'a:4:{s:10:\"admin_name\";s:5:\"admin\";s:11:\"action_list\";s:3:\"all\";s:10:\"last_check\";i:1495244241;s:12:\"suppliers_id\";s:1:\"0\";}' WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions` WHERE expiry < 1495271360
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` AS g WHERE is_delete='0'  AND is_real='1'
+
+SELECT goods_id, goods_name, goods_type, goods_sn, virtual_sales, shop_price, is_on_sale, is_best, is_new, is_hot, sort_order, goods_number, integral,  (promote_price > 0 AND promote_start_date <= '1495267199' AND promote_end_date >= '1495267199') AS is_promote  FROM `ecfw0009`.`ecs_goods` AS g WHERE is_delete='0'  AND is_real='1' ORDER BY goods_id DESC  LIMIT 0,15
+
+SELECT DISTINCT cat_id
+            FROM `ecfw0009`.`ecs_attribute`
+            WHERE attr_type = 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1495271361
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT * FROM `ecfw0009`.`ecs_drp_config`
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1495273189', ip = '0.0.0.0', userid = '0', adminid = '14', user_name='0', user_rank='0', discount='0', email='0', data = 'a:4:{s:10:\"admin_name\";s:5:\"admin\";s:11:\"action_list\";s:3:\"all\";s:10:\"last_check\";i:1495244241;s:12:\"suppliers_id\";s:1:\"0\";}' WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1495271389
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods_activity` WHERE act_type = '1' 
+
+SELECT * FROM `ecfw0009`.`ecs_goods_activity` WHERE act_type = '1'   ORDER BY act_id DESC  LIMIT 0, 15
+
+SELECT goods_id FROM `ecfw0009`.`ecs_goods_activity`WHERE act_id = '23' AND act_type = '1'
+
+SELECT COUNT(*) AS total_order, SUM(g.goods_number) AS total_goods FROM `ecfw0009`.`ecs_order_info` AS o, `ecfw0009`.`ecs_order_goods` AS g  WHERE o.order_id = g.order_id AND o.extension_code = 'group_buy' AND o.extension_id = '23' AND g.goods_id = '38' AND (order_status = '1' OR order_status = '0')
+
+SELECT goods_id FROM `ecfw0009`.`ecs_goods_activity`WHERE act_id = '22' AND act_type = '1'
+
+SELECT COUNT(*) AS total_order, SUM(g.goods_number) AS total_goods FROM `ecfw0009`.`ecs_order_info` AS o, `ecfw0009`.`ecs_order_goods` AS g  WHERE o.order_id = g.order_id AND o.extension_code = 'group_buy' AND o.extension_id = '22' AND g.goods_id = '88' AND (order_status = '1' OR order_status = '0')
+
+SELECT goods_id FROM `ecfw0009`.`ecs_goods_activity`WHERE act_id = '21' AND act_type = '1'
+
+SELECT COUNT(*) AS total_order, SUM(g.goods_number) AS total_goods FROM `ecfw0009`.`ecs_order_info` AS o, `ecfw0009`.`ecs_order_goods` AS g  WHERE o.order_id = g.order_id AND o.extension_code = 'group_buy' AND o.extension_id = '21' AND g.goods_id = '74' AND (order_status = '1' OR order_status = '0')
+
+SELECT goods_id FROM `ecfw0009`.`ecs_goods_activity`WHERE act_id = '20' AND act_type = '1'
+
+SELECT COUNT(*) AS total_order, SUM(g.goods_number) AS total_goods FROM `ecfw0009`.`ecs_order_info` AS o, `ecfw0009`.`ecs_order_goods` AS g  WHERE o.order_id = g.order_id AND o.extension_code = 'group_buy' AND o.extension_id = '20' AND g.goods_id = '94' AND (order_status = '1' OR order_status = '0')
+
+SELECT goods_id FROM `ecfw0009`.`ecs_goods_activity`WHERE act_id = '17' AND act_type = '1'
+
+SELECT COUNT(*) AS total_order, SUM(g.goods_number) AS total_goods FROM `ecfw0009`.`ecs_order_info` AS o, `ecfw0009`.`ecs_order_goods` AS g  WHERE o.order_id = g.order_id AND o.extension_code = 'group_buy' AND o.extension_id = '17' AND g.goods_id = '30' AND (order_status = '1' OR order_status = '0')
+
+SELECT goods_id FROM `ecfw0009`.`ecs_goods_activity`WHERE act_id = '16' AND act_type = '1'
+
+SELECT COUNT(*) AS total_order, SUM(g.goods_number) AS total_goods FROM `ecfw0009`.`ecs_order_info` AS o, `ecfw0009`.`ecs_order_goods` AS g  WHERE o.order_id = g.order_id AND o.extension_code = 'group_buy' AND o.extension_id = '16' AND g.goods_id = '47' AND (order_status = '1' OR order_status = '0')
+
+SELECT goods_id FROM `ecfw0009`.`ecs_goods_activity`WHERE act_id = '15' AND act_type = '1'
+
+SELECT COUNT(*) AS total_order, SUM(g.goods_number) AS total_goods FROM `ecfw0009`.`ecs_order_info` AS o, `ecfw0009`.`ecs_order_goods` AS g  WHERE o.order_id = g.order_id AND o.extension_code = 'group_buy' AND o.extension_id = '15' AND g.goods_id = '29' AND (order_status = '1' OR order_status = '0')
+
+SELECT goods_id FROM `ecfw0009`.`ecs_goods_activity`WHERE act_id = '14' AND act_type = '1'
+
+SELECT COUNT(*) AS total_order, SUM(g.goods_number) AS total_goods FROM `ecfw0009`.`ecs_order_info` AS o, `ecfw0009`.`ecs_order_goods` AS g  WHERE o.order_id = g.order_id AND o.extension_code = 'group_buy' AND o.extension_id = '14' AND g.goods_id = '45' AND (order_status = '1' OR order_status = '0')
+
+SELECT goods_id FROM `ecfw0009`.`ecs_goods_activity`WHERE act_id = '13' AND act_type = '1'
+
+SELECT COUNT(*) AS total_order, SUM(g.goods_number) AS total_goods FROM `ecfw0009`.`ecs_order_info` AS o, `ecfw0009`.`ecs_order_goods` AS g  WHERE o.order_id = g.order_id AND o.extension_code = 'group_buy' AND o.extension_id = '13' AND g.goods_id = '46' AND (order_status = '1' OR order_status = '0')
+
+SELECT goods_id FROM `ecfw0009`.`ecs_goods_activity`WHERE act_id = '12' AND act_type = '1'
+
+SELECT COUNT(*) AS total_order, SUM(g.goods_number) AS total_goods FROM `ecfw0009`.`ecs_order_info` AS o, `ecfw0009`.`ecs_order_goods` AS g  WHERE o.order_id = g.order_id AND o.extension_code = 'group_buy' AND o.extension_id = '12' AND g.goods_id = '27' AND (order_status = '1' OR order_status = '0')
+
+DELETE FROM `ecfw0009`.`ecs_sessions` WHERE expiry < 1495271392
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT suppliers_id, suppliers_name, suppliers_desc
+            FROM `ecfw0009`.`ecs_suppliers`
+            WHERE  is_check = 1 
+
+SELECT c.cat_id, c.cat_name, c.measure_unit, c.parent_id, c.is_show, c.show_in_nav, c.grade, c.sort_order, COUNT(s.cat_id) AS has_children FROM `ecfw0009`.`ecs_category` AS c LEFT JOIN `ecfw0009`.`ecs_category` AS s ON s.parent_id=c.cat_id GROUP BY c.cat_id ORDER BY c.parent_id, c.sort_order ASC
+
+SELECT cat_id, COUNT(*) AS goods_num  FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND is_on_sale = 1  GROUP BY cat_id
+
+SELECT gc.cat_id, COUNT(*) AS goods_num  FROM `ecfw0009`.`ecs_goods_cat` AS gc , `ecfw0009`.`ecs_goods` AS g  WHERE g.goods_id = gc.goods_id AND g.is_delete = 0 AND g.is_on_sale = 1  GROUP BY gc.cat_id
+
+SELECT brand_id, brand_name FROM `ecfw0009`.`ecs_brand` ORDER BY sort_order
+
+SELECT suppliers_id, suppliers_name, suppliers_desc
+            FROM `ecfw0009`.`ecs_suppliers`
+            WHERE  is_check = 1 
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` AS g WHERE is_delete='0'  AND is_real='1'
+
+SELECT goods_id, goods_name, goods_type, goods_sn, virtual_sales, shop_price, is_on_sale, is_best, is_new, is_hot, sort_order, goods_number, integral,  (promote_price > 0 AND promote_start_date <= '1495267199' AND promote_end_date >= '1495267199') AS is_promote  FROM `ecfw0009`.`ecs_goods` AS g WHERE is_delete='0'  AND is_real='1' ORDER BY goods_id DESC  LIMIT 0,15
+
+SELECT DISTINCT cat_id
+            FROM `ecfw0009`.`ecs_attribute`
+            WHERE attr_type = 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1495271393
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT * FROM `ecfw0009`.`ecs_payment` WHERE enabled = '1' ORDER BY pay_order
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1495271393
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT message_id, sender_id, receiver_id, sent_time, readed, deleted, title, message, user_name FROM `ecfw0009`.`ecs_admin_message` AS a, `ecfw0009`.`ecs_admin_user` AS b WHERE a.sender_id = b.user_id AND a.receiver_id = '14' AND a.readed = 0 AND deleted = 0 ORDER BY a.sent_time DESC
+
+SELECT pay_id, is_cod FROM `ecfw0009`.`ecs_payment` WHERE enabled = 1
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE 1  AND order_status  IN ('1','5')  AND shipping_status  IN ('1','2')  AND pay_status  IN ('2','1')  
+
+SELECT pay_id FROM `ecfw0009`.`ecs_payment` WHERE is_cod = 1
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE 1  AND   order_status  IN ('1','5','6')  AND   shipping_status  IN ('0','3','5')  AND ( pay_status  IN ('2','1')  OR pay_id  IN ('3') ) 
+
+SELECT pay_id FROM `ecfw0009`.`ecs_payment` WHERE is_cod = 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE 1  AND   order_status  IN ('1','5')  AND   pay_status = '0' AND ( shipping_status  IN ('1','2')  OR pay_id  IN ('1','2','4','5','6','7') ) 
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE 1  AND order_status = '0' 
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE  shipping_status=4
+
+SELECT COUNT(*) AS oCount, IFNULL(SUM(order_amount), 0) AS oAmount FROM `ecfw0009`.`ecs_order_info`
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND is_alone_sale = 1 AND is_real = 1
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND is_alone_sale = 1 AND is_real=0 AND extension_code='virtual_card'
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND is_new = 1 AND is_real = 1
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND is_new = 1 AND is_real=0 AND extension_code='virtual_card'
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND is_best = 1 AND is_real = 1
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND is_best = 1 AND is_real=0 AND extension_code='virtual_card'
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND is_hot = 1 AND is_real = 1
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND is_hot = 1 AND is_real=0 AND extension_code='virtual_card'
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND promote_price>0 AND promote_start_date <= '1495244394' AND promote_end_date >= '1495244394' AND is_real = 1
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND promote_price>0 AND promote_start_date <= '1495244394' AND promote_end_date >= '1495244394' AND is_real=0 AND extension_code='virtual_card'
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND goods_number <= warn_number AND is_real = 1
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND goods_number <= warn_number AND is_real=0 AND extension_code='virtual_card'
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_stats` WHERE access_time > 1495180800
+
+SELECT count(*) FROM `ecfw0009`.`ecs_sessions`
+
+SELECT COUNT(f.msg_id) FROM `ecfw0009`.`ecs_feedback` AS f LEFT JOIN `ecfw0009`.`ecs_feedback` AS r ON r.parent_id=f.msg_id WHERE f.parent_id=0 AND ISNULL(r.msg_id) 
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_comment` WHERE status = 0 AND parent_id = 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_booking_goods` WHERE is_dispose = 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_user_account` WHERE process_type = 1 AND is_paid = 0 
+
+DELETE FROM `ecfw0009`.`ecs_sessions` WHERE expiry < 1495271394
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT COUNT(*) AS oCount, IFNULL(SUM(order_amount), 0) AS oAmount FROM `ecfw0009`.`ecs_order_info`
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND is_alone_sale = 1 AND is_real = 1
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_users`
+
+SELECT value FROM `ecfw0009`.`ecs_shop_config` WHERE code = 'template'
+
+SELECT value FROM `ecfw0009`.`ecs_shop_config` WHERE code = 'stylename'
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1495273255', ip = '0.0.0.0', userid = '0', adminid = '14', user_name='0', user_rank='0', discount='0', email='0', data = 'a:4:{s:10:\"admin_name\";s:5:\"admin\";s:11:\"action_list\";s:3:\"all\";s:10:\"last_check\";i:1495244241;s:12:\"suppliers_id\";s:1:\"0\";}' WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2' LIMIT 1
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT message_id, sender_id, receiver_id, sent_time, readed, deleted, title, message, user_name FROM `ecfw0009`.`ecs_admin_message` AS a, `ecfw0009`.`ecs_admin_user` AS b WHERE a.sender_id = b.user_id AND a.receiver_id = '14' AND a.readed = 0 AND deleted = 0 ORDER BY a.sent_time DESC
+
+SELECT pay_id, is_cod FROM `ecfw0009`.`ecs_payment` WHERE enabled = 1
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE 1  AND order_status  IN ('1','5')  AND shipping_status  IN ('1','2')  AND pay_status  IN ('2','1')  
+
+SELECT pay_id FROM `ecfw0009`.`ecs_payment` WHERE is_cod = 1
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE 1  AND   order_status  IN ('1','5','6')  AND   shipping_status  IN ('0','3','5')  AND ( pay_status  IN ('2','1')  OR pay_id  IN ('3') ) 
+
+SELECT pay_id FROM `ecfw0009`.`ecs_payment` WHERE is_cod = 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE 1  AND   order_status  IN ('1','5')  AND   pay_status = '0' AND ( shipping_status  IN ('1','2')  OR pay_id  IN ('1','2','4','5','6','7') ) 
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE 1  AND order_status = '0' 
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE  shipping_status=4
+
+SELECT COUNT(*) AS oCount, IFNULL(SUM(order_amount), 0) AS oAmount FROM `ecfw0009`.`ecs_order_info`
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND is_alone_sale = 1 AND is_real = 1
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND is_alone_sale = 1 AND is_real=0 AND extension_code='virtual_card'
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND is_new = 1 AND is_real = 1
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND is_new = 1 AND is_real=0 AND extension_code='virtual_card'
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND is_best = 1 AND is_real = 1
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND is_best = 1 AND is_real=0 AND extension_code='virtual_card'
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND is_hot = 1 AND is_real = 1
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND is_hot = 1 AND is_real=0 AND extension_code='virtual_card'
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND promote_price>0 AND promote_start_date <= '1495244480' AND promote_end_date >= '1495244480' AND is_real = 1
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND promote_price>0 AND promote_start_date <= '1495244480' AND promote_end_date >= '1495244480' AND is_real=0 AND extension_code='virtual_card'
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND goods_number <= warn_number AND is_real = 1
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND goods_number <= warn_number AND is_real=0 AND extension_code='virtual_card'
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_stats` WHERE access_time > 1495180800
+
+SELECT count(*) FROM `ecfw0009`.`ecs_sessions`
+
+SELECT COUNT(f.msg_id) FROM `ecfw0009`.`ecs_feedback` AS f LEFT JOIN `ecfw0009`.`ecs_feedback` AS r ON r.parent_id=f.msg_id WHERE f.parent_id=0 AND ISNULL(r.msg_id) 
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_comment` WHERE status = 0 AND parent_id = 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_booking_goods` WHERE is_dispose = 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_user_account` WHERE process_type = 1 AND is_paid = 0 
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1495273280', ip = '0.0.0.0', userid = '0', adminid = '14', user_name='0', user_rank='0', discount='0', email='0', data = 'a:4:{s:10:\"admin_name\";s:5:\"admin\";s:11:\"action_list\";s:3:\"all\";s:10:\"last_check\";i:1495244241;s:12:\"suppliers_id\";s:1:\"0\";}' WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1495271480
+
+DELETE FROM `ecfw0009`.`ecs_sessions` WHERE expiry < 1495271480
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'f9afcc5300cb422f3fe299987759f9f2'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT COUNT(*) AS oCount, IFNULL(SUM(order_amount), 0) AS oAmount FROM `ecfw0009`.`ecs_order_info`
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods` WHERE is_delete = 0 AND is_alone_sale = 1 AND is_real = 1
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_users`
+
+SELECT value FROM `ecfw0009`.`ecs_shop_config` WHERE code = 'template'
+
+SELECT value FROM `ecfw0009`.`ecs_shop_config` WHERE code = 'stylename'
+

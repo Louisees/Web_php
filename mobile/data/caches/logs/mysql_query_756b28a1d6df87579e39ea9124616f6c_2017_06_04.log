@@ -1,0 +1,964 @@
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('b486aa60a76ec55d7f6a325d9809b73c', '1496545737', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496545737', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:0:{}' WHERE sesskey = 'b486aa60a76ec55d7f6a325d9809b73c' LIMIT 1
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'b486aa60a76ec55d7f6a325d9809b73c'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'b486aa60a76ec55d7f6a325d9809b73c'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT `ec_salt` FROM `ecfw0009`.`ecs_admin_user`WHERE user_name = 'admin'
+
+SELECT user_id, user_name, password, last_login, action_list, last_login,suppliers_id,ec_salt FROM `ecfw0009`.`ecs_admin_user` WHERE user_name = 'admin' AND password = 'b5782b07e92e95fff5794f58e01379d9'
+
+UPDATE `ecfw0009`.`ecs_admin_user` SET last_login='1496516942', last_ip='0.0.0.0' WHERE user_id='14'
+
+SELECT DISTINCT session_id FROM `ecfw0009`.`ecs_cart` AS c, `ecfw0009`.`ecs_sessions` AS s WHERE c.session_id = s.sesskey 
+
+DELETE FROM `ecfw0009`.`ecs_cart` WHERE session_id NOT  IN ('') 
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496545742', ip = '0.0.0.0', userid = '0', adminid = '14', user_name='0', user_rank='0', discount='0', email='0', data = 'a:4:{s:10:\"admin_name\";s:5:\"admin\";s:11:\"action_list\";s:3:\"all\";s:10:\"last_check\";s:10:\"1496458809\";s:12:\"suppliers_id\";s:1:\"0\";}' WHERE sesskey = 'b486aa60a76ec55d7f6a325d9809b73c' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496543942
+
+DELETE FROM `ecfw0009`.`ecs_sessions` WHERE expiry < 1496543942
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'b486aa60a76ec55d7f6a325d9809b73c'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+DELETE FROM `ecfw0009`.`ecs_sessions` WHERE expiry < 1496543942
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'b486aa60a76ec55d7f6a325d9809b73c'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_brand`
+
+SELECT * FROM `ecfw0009`.`ecs_brand` ORDER BY sort_order ASC LIMIT 15
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496543943
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'b486aa60a76ec55d7f6a325d9809b73c'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE add_time >= '1496458809'
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE pay_time >= 1496458809
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496545743', ip = '0.0.0.0', userid = '0', adminid = '14', user_name='0', user_rank='0', discount='0', email='0', data = 'a:4:{s:10:\"admin_name\";s:5:\"admin\";s:11:\"action_list\";s:3:\"all\";s:10:\"last_check\";i:1496516943;s:12:\"suppliers_id\";s:1:\"0\";}' WHERE sesskey = 'b486aa60a76ec55d7f6a325d9809b73c' LIMIT 1
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'b486aa60a76ec55d7f6a325d9809b73c'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_goods_activity` WHERE act_type = '1' 
+
+SELECT * FROM `ecfw0009`.`ecs_goods_activity` WHERE act_type = '1'   ORDER BY act_id DESC  LIMIT 0, 15
+
+SELECT goods_id FROM `ecfw0009`.`ecs_goods_activity`WHERE act_id = '23' AND act_type = '1'
+
+SELECT COUNT(*) AS total_order, SUM(g.goods_number) AS total_goods FROM `ecfw0009`.`ecs_order_info` AS o, `ecfw0009`.`ecs_order_goods` AS g  WHERE o.order_id = g.order_id AND o.extension_code = 'group_buy' AND o.extension_id = '23' AND g.goods_id = '38' AND (order_status = '1' OR order_status = '0')
+
+SELECT goods_id FROM `ecfw0009`.`ecs_goods_activity`WHERE act_id = '22' AND act_type = '1'
+
+SELECT COUNT(*) AS total_order, SUM(g.goods_number) AS total_goods FROM `ecfw0009`.`ecs_order_info` AS o, `ecfw0009`.`ecs_order_goods` AS g  WHERE o.order_id = g.order_id AND o.extension_code = 'group_buy' AND o.extension_id = '22' AND g.goods_id = '88' AND (order_status = '1' OR order_status = '0')
+
+SELECT goods_id FROM `ecfw0009`.`ecs_goods_activity`WHERE act_id = '21' AND act_type = '1'
+
+SELECT COUNT(*) AS total_order, SUM(g.goods_number) AS total_goods FROM `ecfw0009`.`ecs_order_info` AS o, `ecfw0009`.`ecs_order_goods` AS g  WHERE o.order_id = g.order_id AND o.extension_code = 'group_buy' AND o.extension_id = '21' AND g.goods_id = '74' AND (order_status = '1' OR order_status = '0')
+
+SELECT goods_id FROM `ecfw0009`.`ecs_goods_activity`WHERE act_id = '20' AND act_type = '1'
+
+SELECT COUNT(*) AS total_order, SUM(g.goods_number) AS total_goods FROM `ecfw0009`.`ecs_order_info` AS o, `ecfw0009`.`ecs_order_goods` AS g  WHERE o.order_id = g.order_id AND o.extension_code = 'group_buy' AND o.extension_id = '20' AND g.goods_id = '94' AND (order_status = '1' OR order_status = '0')
+
+SELECT goods_id FROM `ecfw0009`.`ecs_goods_activity`WHERE act_id = '17' AND act_type = '1'
+
+SELECT COUNT(*) AS total_order, SUM(g.goods_number) AS total_goods FROM `ecfw0009`.`ecs_order_info` AS o, `ecfw0009`.`ecs_order_goods` AS g  WHERE o.order_id = g.order_id AND o.extension_code = 'group_buy' AND o.extension_id = '17' AND g.goods_id = '30' AND (order_status = '1' OR order_status = '0')
+
+SELECT goods_id FROM `ecfw0009`.`ecs_goods_activity`WHERE act_id = '16' AND act_type = '1'
+
+SELECT COUNT(*) AS total_order, SUM(g.goods_number) AS total_goods FROM `ecfw0009`.`ecs_order_info` AS o, `ecfw0009`.`ecs_order_goods` AS g  WHERE o.order_id = g.order_id AND o.extension_code = 'group_buy' AND o.extension_id = '16' AND g.goods_id = '47' AND (order_status = '1' OR order_status = '0')
+
+SELECT goods_id FROM `ecfw0009`.`ecs_goods_activity`WHERE act_id = '15' AND act_type = '1'
+
+SELECT COUNT(*) AS total_order, SUM(g.goods_number) AS total_goods FROM `ecfw0009`.`ecs_order_info` AS o, `ecfw0009`.`ecs_order_goods` AS g  WHERE o.order_id = g.order_id AND o.extension_code = 'group_buy' AND o.extension_id = '15' AND g.goods_id = '29' AND (order_status = '1' OR order_status = '0')
+
+SELECT goods_id FROM `ecfw0009`.`ecs_goods_activity`WHERE act_id = '14' AND act_type = '1'
+
+SELECT COUNT(*) AS total_order, SUM(g.goods_number) AS total_goods FROM `ecfw0009`.`ecs_order_info` AS o, `ecfw0009`.`ecs_order_goods` AS g  WHERE o.order_id = g.order_id AND o.extension_code = 'group_buy' AND o.extension_id = '14' AND g.goods_id = '45' AND (order_status = '1' OR order_status = '0')
+
+SELECT goods_id FROM `ecfw0009`.`ecs_goods_activity`WHERE act_id = '13' AND act_type = '1'
+
+SELECT COUNT(*) AS total_order, SUM(g.goods_number) AS total_goods FROM `ecfw0009`.`ecs_order_info` AS o, `ecfw0009`.`ecs_order_goods` AS g  WHERE o.order_id = g.order_id AND o.extension_code = 'group_buy' AND o.extension_id = '13' AND g.goods_id = '46' AND (order_status = '1' OR order_status = '0')
+
+SELECT goods_id FROM `ecfw0009`.`ecs_goods_activity`WHERE act_id = '12' AND act_type = '1'
+
+SELECT COUNT(*) AS total_order, SUM(g.goods_number) AS total_goods FROM `ecfw0009`.`ecs_order_info` AS o, `ecfw0009`.`ecs_order_goods` AS g  WHERE o.order_id = g.order_id AND o.extension_code = 'group_buy' AND o.extension_id = '12' AND g.goods_id = '27' AND (order_status = '1' OR order_status = '0')
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496543950
+
+DELETE FROM `ecfw0009`.`ecs_sessions` WHERE expiry < 1496543950
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'b486aa60a76ec55d7f6a325d9809b73c'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT * FROM `ecfw0009`.`ecs_drp_config`
+
+DELETE FROM `ecfw0009`.`ecs_sessions` WHERE expiry < 1496543950
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'b486aa60a76ec55d7f6a325d9809b73c'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` o LEFT JOIN`ecfw0009`.`ecs_users` u ON o.user_id = u.user_id LEFT JOIN `ecfw0009`.`ecs_affiliate_log` a ON o.order_id = a.order_id WHERE o.user_id > 0 AND (u.parent_id > 0 AND o.is_separate = 0 OR o.is_separate > 0) 
+
+SELECT o.*, a.log_id, a.user_id as suid,  a.user_name as auser, a.money, a.point, a.separate_type,u.parent_id as up FROM `ecfw0009`.`ecs_order_info` o LEFT JOIN`ecfw0009`.`ecs_users` u ON o.user_id = u.user_id LEFT JOIN `ecfw0009`.`ecs_affiliate_log` a ON o.order_id = a.order_id WHERE o.user_id > 0 AND (u.parent_id > 0 AND o.is_separate = 0 OR o.is_separate > 0)  ORDER BY order_id DESC LIMIT 0,15
+
+DELETE FROM `ecfw0009`.`ecs_sessions` WHERE expiry < 1496543952
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'b486aa60a76ec55d7f6a325d9809b73c'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_drp_shop` where `audit` = "1" 
+
+SELECT s1.* ,(select sum(l.user_money) from `ecfw0009`.`ecs_drp_log` as l join `ecfw0009`.`ecs_drp_shop` as s on l.user_id=s.user_id where s.user_id=s1.user_id and l.user_money > 0 and l.status=1 ) as sale_money ,(select sum(o.goods_amount) from `ecfw0009`.`ecs_order_info` as o left join `ecfw0009`.`ecs_drp_log` as l on o.order_id = l.order_id left join`ecfw0009`.`ecs_drp_order_info` as d on o.order_id = d.order_id where d.drp_id = s1.id and o.pay_status=2 ) as sales_volume FROM `ecfw0009`.`ecs_drp_shop` as s1 where s1.`audit` = '1' ORDER BY sale_money DESC LIMIT 15
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496545753', ip = '0.0.0.0', userid = '0', adminid = '14', user_name='0', user_rank='0', discount='0', email='0', data = 'a:4:{s:10:\"admin_name\";s:5:\"admin\";s:11:\"action_list\";s:3:\"all\";s:10:\"last_check\";i:1496516943;s:12:\"suppliers_id\";s:1:\"0\";}' WHERE sesskey = 'b486aa60a76ec55d7f6a325d9809b73c' LIMIT 1
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'b486aa60a76ec55d7f6a325d9809b73c'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` o LEFT JOIN`ecfw0009`.`ecs_users` u ON o.user_id = u.user_id LEFT JOIN `ecfw0009`.`ecs_affiliate_log` a ON o.order_id = a.order_id WHERE o.user_id > 0 AND (u.parent_id > 0 AND o.is_separate = 0 OR o.is_separate > 0) 
+
+SELECT o.*, a.log_id, a.user_id as suid,  a.user_name as auser, a.money, a.point, a.separate_type,u.parent_id as up FROM `ecfw0009`.`ecs_order_info` o LEFT JOIN`ecfw0009`.`ecs_users` u ON o.user_id = u.user_id LEFT JOIN `ecfw0009`.`ecs_affiliate_log` a ON o.order_id = a.order_id WHERE o.user_id > 0 AND (u.parent_id > 0 AND o.is_separate = 0 OR o.is_separate > 0)  ORDER BY order_id DESC LIMIT 0,15
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496543954
+
+DELETE FROM `ecfw0009`.`ecs_sessions` WHERE expiry < 1496543954
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'b486aa60a76ec55d7f6a325d9809b73c'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+DELETE FROM `ecfw0009`.`ecs_sessions` WHERE expiry < 1496543954
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'b486aa60a76ec55d7f6a325d9809b73c'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` o LEFT JOIN`ecfw0009`.`ecs_users` u ON o.user_id = u.user_id LEFT JOIN `ecfw0009`.`ecs_affiliate_log` a ON o.order_id = a.order_id WHERE o.user_id > 0 AND (u.parent_id > 0 AND o.is_separate = 0 OR o.is_separate > 0) 
+
+SELECT o.*, a.log_id, a.user_id as suid,  a.user_name as auser, a.money, a.point, a.separate_type,u.parent_id as up FROM `ecfw0009`.`ecs_order_info` o LEFT JOIN`ecfw0009`.`ecs_users` u ON o.user_id = u.user_id LEFT JOIN `ecfw0009`.`ecs_affiliate_log` a ON o.order_id = a.order_id WHERE o.user_id > 0 AND (u.parent_id > 0 AND o.is_separate = 0 OR o.is_separate > 0)  ORDER BY order_id DESC LIMIT 0,15
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('87de3b8870a9fed5b24cca195d34751c', '1496545935', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496545935', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496517135;}' WHERE sesskey = '87de3b8870a9fed5b24cca195d34751c' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('281ec6a9fc35d9545431e22b686da0c6', '1496546115', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496546115', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496517315;}' WHERE sesskey = '281ec6a9fc35d9545431e22b686da0c6' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496544315
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('90714bac3c6db4c31b866a07e39d57d7', '1496546295', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496546295', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496517495;}' WHERE sesskey = '90714bac3c6db4c31b866a07e39d57d7' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('74732aaea778597c051fe3b215973dd3', '1496546475', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496546475', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496517675;}' WHERE sesskey = '74732aaea778597c051fe3b215973dd3' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('576d41d616a37fd2060731998d8b22ed', '1496546655', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496546655', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496517855;}' WHERE sesskey = '576d41d616a37fd2060731998d8b22ed' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('dc66c9e1837e8890a95b460530a46ddf', '1496546835', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496546835', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496518035;}' WHERE sesskey = 'dc66c9e1837e8890a95b460530a46ddf' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('d077fbe6a033aed84d7213ffa4e4352f', '1496547015', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496547015', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496518215;}' WHERE sesskey = 'd077fbe6a033aed84d7213ffa4e4352f' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('5ecf34ea35a27c7922ad2d938d8c75f1', '1496547195', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496547195', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496518395;}' WHERE sesskey = '5ecf34ea35a27c7922ad2d938d8c75f1' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('0f125d2d2119eccfd2e880d76a9336b5', '1496547375', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496547375', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496518575;}' WHERE sesskey = '0f125d2d2119eccfd2e880d76a9336b5' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('602dee5e3f1357ec0f1a4e9dca5a4b28', '1496547555', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496547555', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496518755;}' WHERE sesskey = '602dee5e3f1357ec0f1a4e9dca5a4b28' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('988b7aebd4551a9133c1a87061f2627e', '1496547735', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496547735', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496518935;}' WHERE sesskey = '988b7aebd4551a9133c1a87061f2627e' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('0143e113b156bc45c1862dfa3ac1b609', '1496547915', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496547915', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496519115;}' WHERE sesskey = '0143e113b156bc45c1862dfa3ac1b609' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('24e821c581d659892a474da0bf25667f', '1496548095', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496548095', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496519295;}' WHERE sesskey = '24e821c581d659892a474da0bf25667f' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('86facfba5c542b7e060616eb9317e8d3', '1496548275', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496548275', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496519475;}' WHERE sesskey = '86facfba5c542b7e060616eb9317e8d3' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496546475
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('4facb9f443257910478528fec04799b9', '1496548455', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496548455', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496519655;}' WHERE sesskey = '4facb9f443257910478528fec04799b9' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('c8d63c39dcb38e0dda40309428780e60', '1496548635', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496548635', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496519835;}' WHERE sesskey = 'c8d63c39dcb38e0dda40309428780e60' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('9f106692aab2f1a63d318fd1fd5da811', '1496548815', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496548815', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496520015;}' WHERE sesskey = '9f106692aab2f1a63d318fd1fd5da811' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('3140330f8fd85aedb312861e25d1d315', '1496548995', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496548995', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496520195;}' WHERE sesskey = '3140330f8fd85aedb312861e25d1d315' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('a0fb03687f5a1037d585b8e0572d56d1', '1496549175', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496549175', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496520375;}' WHERE sesskey = 'a0fb03687f5a1037d585b8e0572d56d1' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('5ff64efa82b8e0346e756c535e3cfe3d', '1496549355', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496549355', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496520555;}' WHERE sesskey = '5ff64efa82b8e0346e756c535e3cfe3d' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('97cee9c0adf8284daf2b49997f5c05e5', '1496549535', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496549535', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496520735;}' WHERE sesskey = '97cee9c0adf8284daf2b49997f5c05e5' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('3cf3e35b698d56c1784a5aea541f887e', '1496549715', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496549715', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496520915;}' WHERE sesskey = '3cf3e35b698d56c1784a5aea541f887e' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('f9497251200fd1439568da15e74b33e3', '1496549895', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496549895', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496521095;}' WHERE sesskey = 'f9497251200fd1439568da15e74b33e3' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496548095
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('6f22490c793c4f4fadaafcd72f834420', '1496550075', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496550075', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496521275;}' WHERE sesskey = '6f22490c793c4f4fadaafcd72f834420' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('da65e7a6f9dbeae4844d54fe2d773ded', '1496550255', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496550255', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496521455;}' WHERE sesskey = 'da65e7a6f9dbeae4844d54fe2d773ded' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('ef1d4064de46f3d9dc7efe8138d65350', '1496550435', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496550435', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496521635;}' WHERE sesskey = 'ef1d4064de46f3d9dc7efe8138d65350' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('b873a48cea267711e3f3ed590d618acb', '1496550615', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496550615', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496521815;}' WHERE sesskey = 'b873a48cea267711e3f3ed590d618acb' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('b8a938926f21181125f3fc118a5ed0af', '1496550795', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496550795', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496521995;}' WHERE sesskey = 'b8a938926f21181125f3fc118a5ed0af' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496548995
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('156b350d00138033610c59ed39ab8822', '1496550975', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496550975', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496522175;}' WHERE sesskey = '156b350d00138033610c59ed39ab8822' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('7952916d6d87c9ed1b202647fce58173', '1496551155', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496551155', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496522355;}' WHERE sesskey = '7952916d6d87c9ed1b202647fce58173' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('4c1bc1f60d3b14f80c41069f7232205b', '1496551335', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496551335', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496522535;}' WHERE sesskey = '4c1bc1f60d3b14f80c41069f7232205b' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496549535
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('362b44db6188ea09a2e933893cfa459c', '1496551515', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496551515', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496522715;}' WHERE sesskey = '362b44db6188ea09a2e933893cfa459c' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('e2caed2604ea7aba0cc8982ee4778580', '1496551695', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496551695', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496522895;}' WHERE sesskey = 'e2caed2604ea7aba0cc8982ee4778580' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('7377b1e06b2d0ff35b4c25a8bf607fd0', '1496551875', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496551875', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496523075;}' WHERE sesskey = '7377b1e06b2d0ff35b4c25a8bf607fd0' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496550075
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('f944ad0eaae389e960cd3e0fd6004b41', '1496552055', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496552055', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496523255;}' WHERE sesskey = 'f944ad0eaae389e960cd3e0fd6004b41' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('d49497f9d1dd155dd74f1556821273ff', '1496552235', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496552235', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496523435;}' WHERE sesskey = 'd49497f9d1dd155dd74f1556821273ff' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('bfb9eed179e6d89ba952374bbd541b70', '1496552415', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496552415', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496523615;}' WHERE sesskey = 'bfb9eed179e6d89ba952374bbd541b70' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('5d39387ef9a7dda24620b3a8114dd421', '1496552597', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496552597', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496523797;}' WHERE sesskey = '5d39387ef9a7dda24620b3a8114dd421' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('dbef4d95a71425ae7229b27a6bbb1b6c', '1496552777', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496552777', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496523977;}' WHERE sesskey = 'dbef4d95a71425ae7229b27a6bbb1b6c' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('e01e7cd2aecc9a9a517413fe6f3fe171', '1496552957', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496552957', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496524157;}' WHERE sesskey = 'e01e7cd2aecc9a9a517413fe6f3fe171' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('30845b301881ad1d11be6eb48da5b99b', '1496553137', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496553137', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496524337;}' WHERE sesskey = '30845b301881ad1d11be6eb48da5b99b' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496551337
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('90aa4b612c52ddad0e833153db57a157', '1496553317', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496553317', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496524517;}' WHERE sesskey = '90aa4b612c52ddad0e833153db57a157' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496551517
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('73f133c3c780289e9ab8a98f59617ed9', '1496553497', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496553497', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496524697;}' WHERE sesskey = '73f133c3c780289e9ab8a98f59617ed9' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('252e94c29297c7e48eaceb836f97fef8', '1496553677', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496553677', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496524877;}' WHERE sesskey = '252e94c29297c7e48eaceb836f97fef8' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('2abf9b2fba5b887751bfff995ebb28e4', '1496553857', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496553857', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496525057;}' WHERE sesskey = '2abf9b2fba5b887751bfff995ebb28e4' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496552057
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('50ff79a82a497c8332ccc155c64a93f7', '1496554037', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496554037', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496525237;}' WHERE sesskey = '50ff79a82a497c8332ccc155c64a93f7' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496552237
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('a2418882a0c8b9d36c77428dfb3a4a1b', '1496554217', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496554217', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496525417;}' WHERE sesskey = 'a2418882a0c8b9d36c77428dfb3a4a1b' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('3cf3b946dc22a71bf193f8cdb850d4fb', '1496554397', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496554397', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496525597;}' WHERE sesskey = '3cf3b946dc22a71bf193f8cdb850d4fb' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('584753dcff419aeaedef54fc5254c7f6', '1496554577', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496554577', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496525777;}' WHERE sesskey = '584753dcff419aeaedef54fc5254c7f6' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496552777
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('48e22c49fc8c956b880e83a79ad3d925', '1496554757', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496554757', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496525957;}' WHERE sesskey = '48e22c49fc8c956b880e83a79ad3d925' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496552957
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('046138bd36704587340d5bda8e658265', '1496554937', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496554937', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496526137;}' WHERE sesskey = '046138bd36704587340d5bda8e658265' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496553137
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('cf0453636d8482d979b44a68cd6fbe6d', '1496555117', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496555117', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496526317;}' WHERE sesskey = 'cf0453636d8482d979b44a68cd6fbe6d' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('9bb9b36eba336de1012a99a06ed748b4', '1496555297', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496555297', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496526497;}' WHERE sesskey = '9bb9b36eba336de1012a99a06ed748b4' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496553497
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('f6f5367b27f7cde6f357fe1db8bd8de0', '1496555477', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496555477', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496526677;}' WHERE sesskey = 'f6f5367b27f7cde6f357fe1db8bd8de0' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('dae59d48c340f74d460a78319cbc1505', '1496555657', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496555657', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496526857;}' WHERE sesskey = 'dae59d48c340f74d460a78319cbc1505' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('87b829cc5111870251ffa9c6ab446919', '1496555837', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496555837', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496527037;}' WHERE sesskey = '87b829cc5111870251ffa9c6ab446919' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496554037
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('8c3d20d3bd66ff8e24ef061c3b6a48e0', '1496556017', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496556017', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496527217;}' WHERE sesskey = '8c3d20d3bd66ff8e24ef061c3b6a48e0' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('43e4ffe04a79b2b02b40de17964795a8', '1496556197', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496556197', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496527397;}' WHERE sesskey = '43e4ffe04a79b2b02b40de17964795a8' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496554397
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('0dbd47ab99e4f176178835bfef7d05da', '1496556377', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496556377', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496527577;}' WHERE sesskey = '0dbd47ab99e4f176178835bfef7d05da' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496554577
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('8ba210ed696b8c839ac03c9ced1d1453', '1496556557', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496556557', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496527757;}' WHERE sesskey = '8ba210ed696b8c839ac03c9ced1d1453' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496554757
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('1348efe6fe371c02c0875d85c1f604b9', '1496556737', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496556737', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496527937;}' WHERE sesskey = '1348efe6fe371c02c0875d85c1f604b9' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('961641336c363f317ccf90e676255e64', '1496556917', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496556917', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496528117;}' WHERE sesskey = '961641336c363f317ccf90e676255e64' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('c9028660911abf4c0852d0e4a7e0e922', '1496557097', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496557097', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496528297;}' WHERE sesskey = 'c9028660911abf4c0852d0e4a7e0e922' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('948a42fb8a2cdd7c80ec2cfe0b8d6ff8', '1496557277', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496557277', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496528477;}' WHERE sesskey = '948a42fb8a2cdd7c80ec2cfe0b8d6ff8' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496555477
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('d1e5d2d74869bd1161c23e66be213fc8', '1496557457', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496557457', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496528657;}' WHERE sesskey = 'd1e5d2d74869bd1161c23e66be213fc8' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('38c7ed855d5dbb9e2846e67e4c887c58', '1496557637', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496557637', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496528837;}' WHERE sesskey = '38c7ed855d5dbb9e2846e67e4c887c58' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496555837
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('bc12dd4ad8d894eaa24fbe55e8be579e', '1496557817', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496557817', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496529017;}' WHERE sesskey = 'bc12dd4ad8d894eaa24fbe55e8be579e' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('d882226864045a08de1682323e3462bb', '1496557997', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496557997', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496529197;}' WHERE sesskey = 'd882226864045a08de1682323e3462bb' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('c466ea31d587c62b70aae12fdff5672f', '1496558177', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496558177', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496529377;}' WHERE sesskey = 'c466ea31d587c62b70aae12fdff5672f' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('250e18a07eaf9b54976209b728e5a391', '1496558357', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496558357', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496529557;}' WHERE sesskey = '250e18a07eaf9b54976209b728e5a391' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('ea607a6b842e2f19cac5e198e7e9a919', '1496558537', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496558537', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496529737;}' WHERE sesskey = 'ea607a6b842e2f19cac5e198e7e9a919' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('beeb95de665cf4f0ec08d7bf27152e09', '1496558717', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496558717', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496529917;}' WHERE sesskey = 'beeb95de665cf4f0ec08d7bf27152e09' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('43115eacb825249ef8e9f81c076e2562', '1496558897', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496558897', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496530097;}' WHERE sesskey = '43115eacb825249ef8e9f81c076e2562' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('a0ebace59b4d992c721bcd9ba18181dd', '1496559077', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496559077', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496530277;}' WHERE sesskey = 'a0ebace59b4d992c721bcd9ba18181dd' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496557277
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('e9c3e8b6014b622ec97178f96d21c8cf', '1496559257', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496559257', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496530457;}' WHERE sesskey = 'e9c3e8b6014b622ec97178f96d21c8cf' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('08a1f80e471cada18dcaa5389c5fd4f1', '1496559437', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496559437', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496530637;}' WHERE sesskey = '08a1f80e471cada18dcaa5389c5fd4f1' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496557637
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('d32b3b80cfdff032cedc03d3d550f4d2', '1496559617', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496559617', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496530817;}' WHERE sesskey = 'd32b3b80cfdff032cedc03d3d550f4d2' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496557817
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('91e97a4261966efec605216a077d5ef3', '1496559797', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496559797', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496530997;}' WHERE sesskey = '91e97a4261966efec605216a077d5ef3' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('0a4ccf57e69793eea43ac10f8929092c', '1496559977', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496559977', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496531177;}' WHERE sesskey = '0a4ccf57e69793eea43ac10f8929092c' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('73a6d3cd9eac132edc6e85cf0bace497', '1496560157', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496560157', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496531357;}' WHERE sesskey = '73a6d3cd9eac132edc6e85cf0bace497' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496558357
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('1ce5e45842ab895fb00c43783eb3907a', '1496560337', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496560337', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496531537;}' WHERE sesskey = '1ce5e45842ab895fb00c43783eb3907a' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496558537
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('153ed0dc1c11755fc27d96e9ae3e1c66', '1496560517', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496560517', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496531717;}' WHERE sesskey = '153ed0dc1c11755fc27d96e9ae3e1c66' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496558717
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('cb91483887a23496ed9e30be2f81d138', '1496560697', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496560697', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496531897;}' WHERE sesskey = 'cb91483887a23496ed9e30be2f81d138' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('f671c9286568717fa2f5c22029452caf', '1496560877', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496560877', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496532077;}' WHERE sesskey = 'f671c9286568717fa2f5c22029452caf' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('1ba877df192c6eeca55b56945d67a734', '1496561057', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496561057', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496532257;}' WHERE sesskey = '1ba877df192c6eeca55b56945d67a734' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('d5a8b0e936506d01e1368bcb6d9465f2', '1496561237', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496561237', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496532437;}' WHERE sesskey = 'd5a8b0e936506d01e1368bcb6d9465f2' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496559437
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('d818aa3b17fc10c7a477f825429121b4', '1496561417', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496561417', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496532617;}' WHERE sesskey = 'd818aa3b17fc10c7a477f825429121b4' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('7e351cbdc030f706ff33488e4184a425', '1496561597', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496561597', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496532797;}' WHERE sesskey = '7e351cbdc030f706ff33488e4184a425' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496559797
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('d3c3391d6a29aa802b85ac2b8f814cf3', '1496561777', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496561777', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496532977;}' WHERE sesskey = 'd3c3391d6a29aa802b85ac2b8f814cf3' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496559977
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('b9636bbf45f98ab4d34d07992ac85c82', '1496561957', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496561957', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496533157;}' WHERE sesskey = 'b9636bbf45f98ab4d34d07992ac85c82' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('13c15a66640c5b49f8c1edb68abca433', '1496562137', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496562137', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496533337;}' WHERE sesskey = '13c15a66640c5b49f8c1edb68abca433' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('70a3d6017d55e4d48fefe83aff65b251', '1496562317', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496562317', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496533517;}' WHERE sesskey = '70a3d6017d55e4d48fefe83aff65b251' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('07cd164a9511005517f1cc563a1a18a9', '1496562497', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496562497', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496533697;}' WHERE sesskey = '07cd164a9511005517f1cc563a1a18a9' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496560697
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('e10dd15655a6aaf7b23db38a02021769', '1496562677', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496562677', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496533877;}' WHERE sesskey = 'e10dd15655a6aaf7b23db38a02021769' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496560877
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('250879f435acbf938e5f32c418c47a92', '1496562857', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496562857', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496534057;}' WHERE sesskey = '250879f435acbf938e5f32c418c47a92' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496561057
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('bfff4d7e93979b81b3ef7213b4ddf406', '1496563037', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496563037', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496534237;}' WHERE sesskey = 'bfff4d7e93979b81b3ef7213b4ddf406' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496561237
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('d1248c4967b7f441a6078a4112829b1d', '1496563217', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496563217', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496534417;}' WHERE sesskey = 'd1248c4967b7f441a6078a4112829b1d' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496561417
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('e01fb59f4690001ec2d8f981a2f5ed30', '1496563397', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496563397', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496534597;}' WHERE sesskey = 'e01fb59f4690001ec2d8f981a2f5ed30' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496561597
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('9d05e86c28a6c486f8c68901d77b9f16', '1496563577', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496563577', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496534777;}' WHERE sesskey = '9d05e86c28a6c486f8c68901d77b9f16' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('ee849a1f0a4d0f1bb7e318b2b481d4f2', '1496563757', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496563757', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496534957;}' WHERE sesskey = 'ee849a1f0a4d0f1bb7e318b2b481d4f2' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('2441249a8dcf83f71179e77eb2b558a0', '1496563937', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496563937', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496535137;}' WHERE sesskey = '2441249a8dcf83f71179e77eb2b558a0' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('658b5e55829da59c8c815e47e9c3c168', '1496564117', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496564117', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496535317;}' WHERE sesskey = '658b5e55829da59c8c815e47e9c3c168' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('0bbc58929dbbe64ed5a3f35cde04a45a', '1496564297', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496564297', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496535497;}' WHERE sesskey = '0bbc58929dbbe64ed5a3f35cde04a45a' LIMIT 1
+
+INSERT INTO `ecfw0009`.`ecs_sessions` (sesskey, expiry, ip, data) VALUES ('ad14058188542f566d2f5f511bd1240e', '1496564477', '0.0.0.0', 'a:0:{}')
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496564477', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496535677;}' WHERE sesskey = 'ad14058188542f566d2f5f511bd1240e' LIMIT 1
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'ad14058188542f566d2f5f511bd1240e'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE add_time >= '1496535677'
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE pay_time >= 1496535677
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496564657', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496535857;}' WHERE sesskey = 'ad14058188542f566d2f5f511bd1240e' LIMIT 1
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'ad14058188542f566d2f5f511bd1240e'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE add_time >= '1496535857'
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE pay_time >= 1496535857
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496564837', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496536037;}' WHERE sesskey = 'ad14058188542f566d2f5f511bd1240e' LIMIT 1
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'ad14058188542f566d2f5f511bd1240e'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE add_time >= '1496536037'
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE pay_time >= 1496536037
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496565017', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496536217;}' WHERE sesskey = 'ad14058188542f566d2f5f511bd1240e' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496563217
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'ad14058188542f566d2f5f511bd1240e'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE add_time >= '1496536217'
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE pay_time >= 1496536217
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496565197', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496536397;}' WHERE sesskey = 'ad14058188542f566d2f5f511bd1240e' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496563397
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'ad14058188542f566d2f5f511bd1240e'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE add_time >= '1496536397'
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE pay_time >= 1496536397
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496565377', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496536577;}' WHERE sesskey = 'ad14058188542f566d2f5f511bd1240e' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496563577
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'ad14058188542f566d2f5f511bd1240e'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE add_time >= '1496536577'
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE pay_time >= 1496536577
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496565557', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496536757;}' WHERE sesskey = 'ad14058188542f566d2f5f511bd1240e' LIMIT 1
+
+DELETE FROM `ecfw0009`.`ecs_sessions_data` WHERE expiry < 1496563757
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'ad14058188542f566d2f5f511bd1240e'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE add_time >= '1496536757'
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE pay_time >= 1496536757
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496565737', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496536937;}' WHERE sesskey = 'ad14058188542f566d2f5f511bd1240e' LIMIT 1
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'ad14058188542f566d2f5f511bd1240e'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE add_time >= '1496536937'
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE pay_time >= 1496536937
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496565917', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496537117;}' WHERE sesskey = 'ad14058188542f566d2f5f511bd1240e' LIMIT 1
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'ad14058188542f566d2f5f511bd1240e'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE add_time >= '1496537117'
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE pay_time >= 1496537117
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496566097', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496537297;}' WHERE sesskey = 'ad14058188542f566d2f5f511bd1240e' LIMIT 1
+
+SELECT userid, adminid, user_name, user_rank, discount, email, data, expiry FROM `ecfw0009`.`ecs_sessions` WHERE sesskey = 'ad14058188542f566d2f5f511bd1240e'
+
+SELECT code, value FROM `ecfw0009`.`ecs_shop_config` WHERE parent_id > 0
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE add_time >= '1496537297'
+
+SELECT COUNT(*) FROM `ecfw0009`.`ecs_order_info` WHERE pay_time >= 1496537297
+
+UPDATE `ecfw0009`.`ecs_sessions` SET expiry = '1496566277', ip = '0.0.0.0', userid = '0', adminid = '0', user_name='0', user_rank='0', discount='0', email='0', data = 'a:1:{s:10:\"last_check\";i:1496537477;}' WHERE sesskey = 'ad14058188542f566d2f5f511bd1240e' LIMIT 1
+
